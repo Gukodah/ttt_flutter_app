@@ -1,0 +1,26 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+      android: 29
+  pre_build:
+    commands:
+      # SONAR
+      - wget -O sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+      - unzip ./sonar-scanner.zip -d sonar-scanner
+      # FLUTER
+      - cp .env.prod .env
+      - git clone https://github.com/flutter/flutter.git -b stable
+      - export PATH="$PATH:$PWD/flutter/bin"
+      - flutter precache
+      - flutter pub get
+  build:
+    commands:
+      - flutter test --machine --coverage > tests.output; cat tests.output
+      - ./sonar-scanner/*/bin/sonar-scanner -Dsonar.host.url=$SONAR_URL -Dsonar.branch.name=$SONAR_BRANCH
+      - flutter build apk --no-shrink
+artifacts:
+  files:
+    - build/app/outputs/apk/release/*.apk
+  discard-paths: yes

@@ -1,0 +1,48 @@
+{
+    "type": "ResponseData",
+    "status": 200,
+    "result": {
+        "authChallenge": {
+            "id": 101,
+            "descricao": "n/a"
+        },
+        "cliente": {
+            "id": "154165",
+            "email": "leonardo.lpds@gmail.com",
+            "pessoa": {
+                "nome": "Leonardo Pereira de Souza Tigre"
+            },
+            "plataformaId": 0,
+            "documentoList": [
+                {
+                    "id": null,
+                    "documentoTipo": {
+                        "id": 1
+                    },
+                    "numero": "40260624810",
+                    "orgaoExpedidor": null,
+                    "dataEmissao": null,
+                    "ultimoInserido": null,
+                    "createdAt": null,
+                    "updatedAt": null
+                }
+            ],
+            "telefoneList": [
+                {
+                    "id": null,
+                    "telefoneTipo": {
+                        "id": 3
+                    },
+                    "ddd": "11",
+                    "numero": "940617677"
+                }
+            ],
+            "statusSubscricao": 1
+        },
+        "accessToken": "eyJraWQiOiIxZGMzMmNhYjIzZTE3NTJkNzNhYjM2MzA0ZTY2NTQwMCIsInR5cCI6IkpXVCIsImFsZyI6IkhTNTEyIn0.eyJjbGllbnRlSWQiOiIxNTQxNjUiLCJzZXNzYW9JZCI6IjFkNTg2MTg3NDkyMTdjMzI5M2Q0ODIxZThhNTk2OWE1IiwiaXNzIjoiVHIxZ2cgVDNjbjBsMGcxYSBMdGQ0IiwiY3BmIjoiNDAyNjA2MjQ4MTAiLCJleHAiOjE2MzI5NDY5MjF9.cQ8VghGUpmIyXC-VSD0SmVGmuGDgKOwIbc1243gOtfX7Ado4PyxOfpwj4pX4jOe04yUoR2uh0Z3t30NOTzMz0A",
+        "refreshToken": "YzdiMDNiMDJlY2U0YzhlZjkyOGYwMDBiNWZkNjNkNmRiMmEyNGY3YjA4NmZkZDQxYThlMjBjMWQxMmI1YjE5MmRhOTJmMDlkNTQyYTA2OWEwYzk0MDIwNzE3YzA4NGFiODNiMTM5ZGRmMGQ1ZWIxMWExYTYxNmQ5ZTg4MzcyZmFjMDcwMjZhMDk4MzEwYzA5NzBiYTk3NjdlNmExZWNhOWE2Yjg1NTU0MDBiZjk4YmVjMDc0ZWFiMjk4OTUyZWZl",
+        "tokenType": "Bearer ",
+        "expiresIn": 10800,
+        "deviceAutorizado": false
+    }
+}
